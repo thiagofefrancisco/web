@@ -9,5 +9,27 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgb(39, 39, 39);
 }
+
+html[data-theme='dark'] .logo {
+    filter: invert(1);
+}
+
+/* header */
+#header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* top/bottom left/right */
+    padding: 10px 20px;    
+}
+
+/* logo */
+.logo {
+    width: 56px;
+    height: auto;
+}
+
