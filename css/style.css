@@ -86,12 +86,6 @@ ul {
     height: auto;
 }
 
-.headerToggle {
-    display: flex;
-    justify-content: flex-end;
-    min-width: 30%;
-}
-
 /* menu desktop */
 .menu {
     display: flex;
@@ -118,9 +112,35 @@ ul {
     font-style: normal;
 }
 
-.header-nav,
-.headerToggle {
-    
+/* Menu Desktop */
+.header-nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .header-nav {
+        display: flex;
+    }
+    .header-nav,
+    .headerToggle {
+    min-width: 20;
+    }
+    .nav-mobile {
+        display: none;
+    }
+}
+
+/* Mmanipulação por herança menu-link filho de menu-pai */
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;    
+}
+
+.menu-mobile {
+    bottom: 0; /* fixa o menu na parte inferior */
+    position: fixed; 
 }
 
 
