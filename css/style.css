@@ -140,8 +140,26 @@ ul {
 
 .menu-mobile {
     bottom: 0; /* fixa o menu na parte inferior */
-    position: fixed; 
+    position: fixed;
+    width: 100vw; /* VW = viewPort - Widith - visualização - largura */
+    justify-content: space-between;
+    border-top: 1px solid #989898;
+    z-index: 1; 
 }
 
+.menu-link.active .icone-link,
+.menu-link.active .menu-texto,
+.menu-link:hover .icone-link,
+.menu-link:hover .menu-texto {
+    /* color: rgb(85, 182, 238); */
+    color:#ffffff
+}
 
+.icone-link,
+.menu-texto {
+    color:#999999;
+}
 
+.icone-link{
+    font-size: 25px;
+}
