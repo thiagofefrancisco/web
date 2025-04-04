@@ -43,6 +43,7 @@
 
 body {
     background-color: rgb(39, 39, 39);
+    color: whitesmoke;
 }
 
 html[data-theme='dark'] .logo {
@@ -127,6 +128,10 @@ ul {
     }
     .nav-mobile {
         display: none;
+    }
+
+    .logo {       
+        margin-left: -150px;
     }
 }
 
