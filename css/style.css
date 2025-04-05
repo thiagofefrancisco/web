@@ -8,8 +8,11 @@
     scrollbar-color: red;
 }
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Lexend:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+/* Google Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Lexend:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 /* Root Fonts 
 
@@ -167,4 +170,75 @@ ul {
 
 .icone-link{
     font-size: 25px;
+}
+/* Fim do CSS do menu */
+
+/* Home | Main */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 400;
+    font-family: "Urbanist", sans-serif;    
+}
+
+p, li, span {
+    font-size: 18px;
+}
+
+p {
+    text-align: justify;
+}
+
+strong {
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    width: 100%;
+    border: none;    
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border: 1px solid white;
+}
+
+.btn span, .btn i {
+    color: white;
+    font-size: 16px;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out 0.3s;
+    background-color: white;
+}
+
+.btn span:hover, .btn i:hover {
+    color: black;
 }
