@@ -13,6 +13,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Variáveis de cores */
+/* Definir cores do tema Dark */
+:root,
+:root[data-theme="dark"] {
+    --fundo-header: red;
+}
+
+:root[data-theme="light"] {
+    --fundo-header: green;
+}
 
 /* Root Fonts 
 
@@ -121,23 +131,6 @@ ul {
     display: none;
 }
 
-@media (min-width: 768px) {
-    .header-nav {
-        display: flex;
-    }
-    .header-nav,
-    .headerToggle {
-    min-width: 20;
-    }
-    .nav-mobile {
-        display: none;
-    }
-
-    .logo {       
-        margin-left: -150px;
-    }
-}
-
 /* Mmanipulação por herança menu-link filho de menu-pai */
 .menu-mobile .menu-link {
     flex-direction: column;
@@ -149,10 +142,11 @@ ul {
 .menu-mobile {
     bottom: 0; /* fixa o menu na parte inferior */
     position: fixed;
-    width: 100vw; /* VW = viewPort - Widith - visualização - largura */
+    width: 100vw; /* VW = viewPort - Width - visualização - largura */
     justify-content: space-between;
     border-top: 1px solid #989898;
     z-index: 1; 
+    background-color: black;
 }
 
 .menu-link.active .icone-link,
@@ -179,6 +173,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap:32px;
+    padding: 40px 16px;
 }
 
 .main-content {
@@ -242,3 +237,67 @@ strong {
 .btn span:hover, .btn i:hover {
     color: black;
 }
+
+.icon-social {
+    font-size: 18px;
+    color: #989898;
+}
+
+.icon-social:hover {
+    color: #ffffff;
+    transition: all ease-in-out 0.5s;
+}
+
+/* ATUALIZAÇÕES FUTURAS - A CADA SEÇÃO NOVA, INCLUIR NESTE CAMPO */ 
+#home {
+    padding: 128x 96px 64px;
+} 
+
+/* CSS Responsivo */
+
+/* @media cria a possibilidade de criação de tela */
+
+/* a partir telas 768px */
+@media (min-width: 768px) {
+
+    #header {
+      background-color:black;
+      position:fixed;
+  
+    }
+    .header-nav {
+        display: flex;
+    }
+  
+    .header-nav,
+    .header-toggle {
+        min-width: 20; /* largura minima do elemento (até 'x') */
+    }
+  
+    .nav-mobile {
+        display: none;
+    }
+  
+    .logo {       
+        margin-left: -150px;
+    }
+
+    #home { /* atualização futura */
+        padding: 128px 96px 64px;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+}
+
+/* 1200px */
+@media (min-width: 1200px) {
+    #home {
+        padding: 160px 96px 32px;
+    }
+}
+  
+
