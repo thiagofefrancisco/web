@@ -66,6 +66,10 @@ body {
     color: var(--color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html[data-theme='dark'] .logo {
     filter: invert(1);
 }
@@ -90,6 +94,7 @@ ul {
     width: 100%;
     /* top/bottom left/right */
     padding: 10px 20px; 
+    border-bottom: 1px solid #726b6b;
     background-color: var(--bg);   
 }
 
@@ -128,7 +133,7 @@ ul {
     font-size: 12px;
     text-transform: uppercase;
     color: var(--color);
-    font-family: "Lexend", sans-serif;
+    font-family: "Urbanist", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -191,13 +196,20 @@ ul {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 400;
+    font-family: "Urbanist", sans-serif;    
+}
+
+h2 {
+    font-size: 30p6x;
+    font-weight: 00;
     font-family: "Urbanist", sans-serif;    
 }
 
 p, li, span {
     font-size: 18px;
+    font-family: "Urbanist", sans-serif;
 }
 
 p {
@@ -221,18 +233,18 @@ strong {
     gap: 5px;
     background: transparent;
     width: 100%;
-    border: none;    
+    border: note;    
     padding: 8px 10px;
     border-radius: 8px;
     cursor: pointer;
 }
 
 .btn-primary {
-    border: 1px solid white;
+    border: 1px solid var(--hover);
 }
 
 .btn span, .btn i {
-    color: white;
+    color: var(--hover);
     font-size: 16px;
 }
 
@@ -257,7 +269,8 @@ strong {
 }
 
 /* ATUALIZAÇÕES FUTURAS - A CADA SEÇÃO NOVA, INCLUIR NESTE CAMPO */ 
-#home {
+#home,
+.projetos {
     padding: 128x 96px 64px;
 } 
 
@@ -290,7 +303,8 @@ strong {
         margin-left: -150px;
     }
 
-    #home { /* atualização futura */
+    #home,
+    .projetos { /* atualização futura */
         padding: 128px 96px 64px;
     }
 
@@ -303,8 +317,34 @@ strong {
 
 /* 1200px */
 @media (min-width: 1200px) {
-    #home {
+    #home,
+    .projetos {
         padding: 160px 96px 32px;
+    }
+
+    h1 {
+        font-size: 80;
+    }
+
+    h2 {
+        font-size: 65;
+    }
+
+    p, span, li {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 100px;
+    }
+    h2 {
+        font-size: 70px;
+    }
+
+    .projetos {
+        padding: 160px 240px 64px; /* superior lateriais inferior */
     }
 }
   
