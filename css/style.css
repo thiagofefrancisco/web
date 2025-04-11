@@ -19,16 +19,21 @@
 /* Definir cores do tema Dark */
 :root,
 :root[data-theme="dark"] {
-    --bg: rgb(39, 39, 39); /* cor fundo */
+    --bg: rgb(20,27,35); /* cor fundo */
     --color: rgb(255, 247, 247); /* cor texto */
     --hover: rgb(241, 229, 229);
+    --sombra: rgb(0, 0, 0);
+    --color-list: #32a2ff;
+
 }
 
 /* Definir cores tema Light */
 :root[data-theme="light"] {
-    --bg: rgb(233, 215, 215); /* cor fundo */
+    --bg: rgb(245,245,247); /* cor fundo */
     --color: rgb(39, 39, 39); /* cor texto */
-    --hover: rgb(39, 39, 39);
+    --hover: rgb(12, 7, 7);
+    --sombra: rgb(192, 192, 192);
+    --color-list: #32a2ff;
 }
 
 /* Root Fonts 
@@ -202,9 +207,18 @@ h1 {
 }
 
 h2 {
-    font-size: 30p6x;
-    font-weight: 00;
-    font-family: "Urbanist", sans-serif;    
+    font-size: 35px;
+    font-weight: 600;
+    font-family: "Urbanist", sans-serif;  
+    letter-spacing: 0px;
+    text-align: center;    
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "Urbanist", sans-serif;
+    text-align: left;
 }
 
 p, li, span {
@@ -213,7 +227,7 @@ p, li, span {
 }
 
 p {
-    text-align: justify;
+    text-align: left;
 }
 
 strong {
@@ -221,7 +235,7 @@ strong {
     color: var(--color);
 }
 
-.video iframe {
+.video iframe {    
     width: 100%;
     aspect-ratio: 16/9;
 }
@@ -268,10 +282,51 @@ strong {
     transition: all ease-in-out 0.5s;
 }
 
+/* Estrutura */
+/* Projetos */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.card-img {
+    width: 100%;
+    pointer-events: none;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0px 10px 25px var(--sombra);/* eixo-x eixo-y blur*/
+}
+
+.card-description {
+    font-size: 16px;
+    font-family: "Urbanist", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.icon-list {
+    color: var(--color-list);
+    font-size: 10px;
+}
+
 /* ATUALIZAÇÕES FUTURAS - A CADA SEÇÃO NOVA, INCLUIR NESTE CAMPO */ 
 #home,
 .projetos {
-    padding: 128x 96px 64px;
+    padding: 40x 16px;
 } 
 
 /* CSS Responsivo */
@@ -313,7 +368,19 @@ strong {
         flex-direction: column;
         align-items:flex-start;
     }
+} /* Fim 768px */
+
+@media (min-width: 992px) {
+
+    .projeto-card {
+        flex-direction: row;
+    }
+
+    .card-img {
+        width: 55%;
+    }
 }
+
 
 /* 1200px */
 @media (min-width: 1200px) {
