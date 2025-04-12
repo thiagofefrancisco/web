@@ -13,8 +13,6 @@
 /* Google Fonts 
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Lexend:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');*/
 
-
-
 /* Variáveis de cores */
 /* Definir cores do tema Dark */
 :root,
@@ -100,7 +98,8 @@ ul {
     /* top/bottom left/right */
     padding: 10px 20px; 
     border-bottom: 1px solid #726b6b;
-    background-color: var(--bg);   
+    background-color: var(--bg);
+    z-index: 999999;   
 }
 
 #toggleTheme {
@@ -323,6 +322,20 @@ strong {
     font-size: 10px;
 }
 
+.card-item { 
+    margin-left: 10px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: "Inter", sans-serif;
+}
+
+card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+}
+
 /* ATUALIZAÇÕES FUTURAS - A CADA SEÇÃO NOVA, INCLUIR NESTE CAMPO */ 
 #home,
 .projetos {
@@ -332,7 +345,7 @@ strong {
 /* CSS Responsivo */
 
 /* @media cria a possibilidade de criação de tela */
-
+/* min-width = a partir de --> */
 /* a partir telas 768px */
 @media (min-width: 768px) {
 
@@ -376,11 +389,24 @@ strong {
         flex-direction: row;
     }
 
+    /* Pseudoclasse */
+    .projeto-card.card-reverse {
+        flex-direction: row-reverse;
+        justify-content: end;
+    }
+
+    .card-reverse .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+    }
+
     .card-img {
         width: 55%;
     }
 }
-
 
 /* 1200px */
 @media (min-width: 1200px) {
@@ -412,6 +438,16 @@ strong {
 
     .projetos {
         padding: 160px 240px 64px; /* superior lateriais inferior */
+    }
+}
+
+/* max-width = largura até = x */
+@media (max-width: 992px) {
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
   
