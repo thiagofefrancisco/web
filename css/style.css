@@ -336,7 +336,7 @@ strong {
     font-family: "Inter", sans-serif;
 }
 
-card-body {
+.card-body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -406,6 +406,75 @@ card-body {
     gap: 10px;
 }
 
+.row2 .sobre-lista li {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+/* Accordion */
+.accordion-header {    
+    width: 100%;
+    border: 1px solid var(--color);
+    display: flex;
+    background: transparent;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 8px 16px;
+    align-items: center;
+    transition: ease-in-out .5s;
+}
+
+.accordion-header span,
+.accordion-header i {
+    color: var(--color)
+}
+
+.accordion-body {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid var(--color);
+    display: none;
+}
+
+.accordion-item.active .accordion-header {
+    background: var(--color);
+}
+
+.accordion-item.active .accordion-header span,
+.accordion-item.active .accordion-header i {
+    color: var(--bg);
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+/* Contato */
+
+/* Rodapé */
+footer {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+footer p {
+    font-size: 16px;
+    text-align: center;
+    padding: 16px;
+    font-family: "Urbanist", sans-serif;
+}
+
+footer a {
+    color: #989898;
+}
+
+footer i:hover,
+footer a:hover {
+    color: #05a2e5;
+    transition: ease-in-out .5s;
+}
 /* CSS Responsivo */
 
 /* @media cria a possibilidade de criação de tela */
