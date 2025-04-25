@@ -438,6 +438,11 @@ strong {
     display: none;
 }
 
+.accordion-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
 .accordion-item.active .accordion-header {
     background: var(--color);
 }
@@ -449,6 +454,11 @@ strong {
 
 .accordion-item.active .accordion-body {
     display: flex;
+}
+
+/* Quando o item estiver ativo, rotaciona a seta */
+.accordion-item.active .accordion-arrow {
+    transform: rotate(180deg); /* seta para cima */
 }
 
 /* Contato */

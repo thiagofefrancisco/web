@@ -14,6 +14,9 @@ function changeTheme () {
 toggleTheme.addEventListener("click", changeTheme);
 
 /* Function Accordion */
+
+const accordionHeader = document.querySelectorAll(".accordion-header");
+
 accordionHeader.forEach(header => {
     header.addEventListener("click", () => {
 
