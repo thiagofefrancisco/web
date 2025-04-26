@@ -19,7 +19,7 @@
 :root[data-theme="dark"] {
     --bg: rgb(20,27,35); /* cor fundo */
     --color: rgb(255, 247, 247); /* cor texto */
-    --hover: rgb(241, 229, 229);
+    --hover: rgb(204, 192, 192);
     --sombra: rgb(0, 0, 0);
     --color-list: #32a2ff;
 
@@ -280,7 +280,7 @@ strong {
 
 .icon-social {
     font-size: 18px;
-    color: #989898;
+    color: #ffffff;
 }
 
 .icon-social:hover {
@@ -346,7 +346,8 @@ strong {
 /* ATUALIZAÇÕES FUTURAS - A CADA SEÇÃO NOVA, INCLUIR NESTE CAMPO */ 
 #home,
 .projetos
-.sobre {
+.sobre
+.contato {
     padding: 40x 16px;
 } 
 
@@ -462,6 +463,33 @@ strong {
 }
 
 /* Contato */
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid var(--color);
+    border-bottom: 1px solid var(--color);
+}
+
+.contato p {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 0 140px;
+}
+
+.contato span {
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.menu-link:hover span,
+.menu-link:hover i {
+    color: var(--hover);
+}
 
 /* Rodapé */
 footer {
