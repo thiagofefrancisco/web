@@ -419,23 +419,35 @@
                     thiagofefrancisco@gmail.com
                 </span>
             </button>
-
-            <!-- Forms -->
-            <p>
-                Entre em contato preenchendo o formulário abaixo.
-            </p>
-
-            <form action="https://formspree.io/f/xovdveyp" method="post">
-                <label for="nome" class="" id="">
-                    Nome
-                </label>
-                <input type="text" placeholder="Digite seu nome aqui" name="nome" id="" class="" required>
-                <button type="submit">
-                    Enviar
-                </button>
-            </form>
-
         </a>
+            
+        <!-- Forms -->
+        <p>
+            Entre em contato preenchendo o formulário abaixo.
+        </p>
+
+        <!-- https://formspree.io/f/xovdveyp -->
+
+        <form action="https://formspree.io/f/xovdveyp" method="post" class="form-contato">
+            <label for="nome" class="name-label" id="name-label">
+                Nome *
+            </label>
+            <input type="text" placeholder="Digite seu nome completo" name="nome" id="name-input" class="name-input" required>
+            
+            <label for="email" class="email-label" id="email-label">
+                E-mail *
+            </label>
+            <input type="email" placeholder="Digite seu melhor e-mail" name="email" id="email-input" class="email-input" required>
+
+            <label for="mensagem" class="mensagem-label" id="mensagem-label">
+                Mensagem *
+            </label>
+            <textarea name="mensagem" id="mensagem" class="input-mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+            <button type="submit" class="btn btn-primary">
+                Enviar
+            </button>
+        </form>          
     </section> <!-- Fim Contato -->
 
     <!-- Rodapé -->

@@ -34,3 +34,41 @@ menuLinks.forEach(item => {
         item.classList.add("active");
     })
 })
+
+// Envio do Formulário com Limpeza dos Campos
+const form = document.querySelector(".form-contato");
+
+form.addEventListener("submit", async function (event) {
+    event.preventDefault(); //impede a atualização da Página.
+
+    const formData = new FormData(form);
+    const action = form.getAttribute("action");
+
+    try {
+        let response = await fetch(action, {
+            method: "POST",
+            body: formData,
+            headers: {"Accept": "application/json"}
+        });
+
+        if (response.ok) {
+            alert("Mensagem enviada com Sucesso!");
+            form.reset();
+        } 
+        else {
+            alert("Erro ao enviar a mensagem. Tente novamente.");
+        }
+    } catch (error) {
+        alert("Erro de conexão. Verifique sua internet.");
+    }
+});
+
+
+window.addEventListener('load', () => {
+    AOS.init({  //instancia
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: false,
+        mirror: true,
+    })
+});

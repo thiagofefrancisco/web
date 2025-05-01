@@ -345,8 +345,8 @@ strong {
 
 /* ATUALIZAÇÕES FUTURAS - A CADA SEÇÃO NOVA, INCLUIR NESTE CAMPO */ 
 #home,
-.projetos
-.sobre
+.projetos,
+.sobre,
 .contato {
     padding: 40x 16px;
 } 
@@ -491,6 +491,51 @@ strong {
     color: var(--hover);
 }
 
+/* Contato */
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500%;
+    background: #989898;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.form-contato label {
+    color: #252525;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Urbanist", sans-serif;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: var(--bg);
+    background: #d8d5d5;
+    border-radius: 6px;
+    border: 1px solid #cacaca;
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    border-color: var(--bg);
+    box-shadow: 0 0 5px #7c7c7c;
+}
+
+.form-contato textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
 /* Rodapé */
 footer {
     margin-top: 60px;
@@ -543,7 +588,9 @@ footer a:hover {
     }
 
     #home,
-    .projetos { /* atualização futura */
+    .projetos,
+    .sobre,
+    .contato { /* atualização futura */
         padding: 128px 96px 64px;
     }
 
@@ -604,7 +651,9 @@ footer a:hover {
 /* 1200px */
 @media (min-width: 1200px) {
     #home,
-    .projetos {
+    .projetos,
+    .sobre,
+    .contato {
         padding: 160px 96px 32px;
     }
 
@@ -634,8 +683,13 @@ footer a:hover {
     }
 
     .projetos,
-    .sobre {
+    .sobre,
+    .contato {
         padding: 160px 240px 64px; /* superior lateriais inferior */
+    }
+
+    .form-contato {
+        width: 40%;
     }
 }
 
